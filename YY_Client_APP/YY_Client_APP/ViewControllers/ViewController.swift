@@ -68,131 +68,13 @@ class ViewController: UIViewController, WKNavigationDelegate {
         
         print(session.token)
         
-        doNetworkRequest(token: session.token)
+        let vkService = VKService()
+        vkService.doNetworkRequest()
+        vkService.getFriends()
         
         decisionHandler(.cancel)
     }
     
-    // Получение данных по группам, друзьям и фото
-    // to-do перенести в отдельный файл
-    func doNetworkRequest(token: String) {
-        
-        authorizationView.load(getFriends()!)
-        let request = Alamofire.Session.default
-        
-        // Получаем список друзей
-        request.request(getFriends()!).responseJSON { response in
-            if let json = response.value {
-                print("FRIENDS JSON: \(json)")
-            }
-        }
-        
-        // Получаем список фотографий пользователя
-        request.request(getPhotos(id: "159295915")!).responseJSON { response in
-            if let json = response.value {
-                print("PHOTOS JSON: \(json)")
-            }
-        }
-
-        // Получаем список групп пользователя
-        request.request(getMyGroups()!).responseJSON { response in
-            if let json = response.value {
-                print("GROUPS JSON: \(json)")
-            }
-        }
-
-        // Получаем список групп по запросу
-        request.request(searchGroups(searchQuery: "Лепра")!).responseJSON { response in
-            if let json = response.value {
-                print("SEARCH JSON: \(json)")
-            }
-        }
-    }
-    
-    
-    // Формировние запросов к VK API
-    // to-do Перенести в отдельный класс
-    func getFriends() -> URLRequest? {
-        let session = Session.instance
-        
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.vk.com"
-        urlComponents.path = "/method/friends.get"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "order", value: "hints"),
-            URLQueryItem(name: "fields", value: "nickname,photo_100"),
-            URLQueryItem(name: "access_token", value: session.token),
-            URLQueryItem(name: "v", value: "5.80")
-        ]
-        if let url = urlComponents.url {
-            return URLRequest(url: url)
-        }
-        
-        return nil
-    }
-    
-    func getPhotos(id ID: String) -> URLRequest? {
-        let session = Session.instance
-        
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.vk.com"
-        urlComponents.path = "/method/photos.get"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "owner_id", value: ID),
-            URLQueryItem(name: "album_id", value: "profile"),
-            URLQueryItem(name: "rev", value: "0"),
-            URLQueryItem(name: "access_token", value: session.token),
-            URLQueryItem(name: "v", value: "5.80")
-        ]
-        if let url = urlComponents.url {
-            return URLRequest(url: url)
-        }
-        
-        return nil
-    }
-    
-    func getMyGroups() -> URLRequest? {
-        let session = Session.instance
-        
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.vk.com"
-        urlComponents.path = "/method/groups.get"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "extended", value: "1"),
-            URLQueryItem(name: "filter", value: "groups"),
-            URLQueryItem(name: "access_token", value: session.token),
-            URLQueryItem(name: "v", value: "5.80")
-        ]
-        if let url = urlComponents.url {
-            return URLRequest(url: url)
-        }
-        
-        return nil
-    }
-    
-    func searchGroups(searchQuery query: String) -> URLRequest? {
-        let session = Session.instance
-        
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.vk.com"
-        urlComponents.path = "/method/groups.search"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "q", value: query),
-            URLQueryItem(name: "type", value: "group"),
-            URLQueryItem(name: "sort", value: "3"),
-            URLQueryItem(name: "access_token", value: session.token),
-            URLQueryItem(name: "v", value: "5.80")
-        ]
-        if let url = urlComponents.url {
-            return URLRequest(url: url)
-        }
-        
-        return nil
-    }
 
 }
 
