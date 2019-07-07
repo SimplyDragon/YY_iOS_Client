@@ -16,5 +16,3 @@ class Session {
     var token: String = ""
     var userID: Int = 0
 }
-
-// https://api.vk.com/method/groups.get?extended=1&access_token=\(token!)&v=5.95

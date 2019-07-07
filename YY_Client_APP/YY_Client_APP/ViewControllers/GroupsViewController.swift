@@ -16,7 +16,6 @@ class GroupsViewController: UIViewController {
         super.viewDidLoad()
 
         let vkService = VKService()
-        //vkService.getFriends()
         
         AF.request(vkService.getMyGroups()!).responseJSON { response in
             //            guard let data = response.value else { return }

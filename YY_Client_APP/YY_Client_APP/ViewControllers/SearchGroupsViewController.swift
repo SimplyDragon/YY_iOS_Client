@@ -15,7 +15,6 @@ class SearchGroupsViewController: UIViewController {
         super.viewDidLoad()
         
         let vkService = VKService()
-        //vkService.getFriends()
         
         AF.request(vkService.searchGroups(searchQuery: "Лепра")!).responseJSON { response in
             //            guard let data = response.value else { return }
