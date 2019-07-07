@@ -14,6 +14,8 @@
 		C474B36A22C95792004BB312 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C474B36822C95792004BB312 /* LaunchScreen.storyboard */; };
 		C474B37222C95A69004BB312 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B37122C95A69004BB312 /* Session.swift */; };
 		C474B37722CC01FB004BB312 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C474B37622CC01FB004BB312 /* WebKit.framework */; };
+		C474B37922D28C87004BB312 /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B37822D28C87004BB312 /* VKService.swift */; };
+		C474B37B22D29917004BB312 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B37A22D29917004BB312 /* Friends.swift */; };
 		D15D361CA6515F85860C1CEB /* Pods_YY_Client_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3437B2D01B9EBE0ADAA5B2F6 /* Pods_YY_Client_APP.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		C474B36B22C95792004BB312 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C474B37122C95A69004BB312 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		C474B37622CC01FB004BB312 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		C474B37822D28C87004BB312 /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		C474B37A22D29917004BB312 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		D8C6A281CC11ACA6106FF550 /* Pods-YY_Client_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YY_Client_APP.debug.xcconfig"; path = "Target Support Files/Pods-YY_Client_APP/Pods-YY_Client_APP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				C474B37122C95A69004BB312 /* Session.swift */,
+				C474B37822D28C87004BB312 /* VKService.swift */,
+				C474B37A22D29917004BB312 /* Friends.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -234,8 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C474B37922D28C87004BB312 /* VKService.swift in Sources */,
 				C474B36222C95791004BB312 /* ViewController.swift in Sources */,
 				C474B36022C95791004BB312 /* AppDelegate.swift in Sources */,
+				C474B37B22D29917004BB312 /* Friends.swift in Sources */,
 				C474B37222C95A69004BB312 /* Session.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
