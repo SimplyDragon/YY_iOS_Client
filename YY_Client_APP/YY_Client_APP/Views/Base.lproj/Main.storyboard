@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hRd-cS-wEH">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ehC-tZ-K7Z">
+            <objects>
+                <navigationController id="hRd-cS-wEH" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3uB-f5-Ivj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="dZO-Iy-s5L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nsH-tl-SLP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-764" y="102"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -18,19 +34,61 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-PG-n1S">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rgc-PG-n1S">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhV-pr-TZL">
+                                <rect key="frame" x="180.5" y="242" width="53" height="30"/>
+                                <state key="normal" title="Группы"/>
+                                <connections>
+                                    <segue destination="Zud-mu-7dw" kind="show" id="bxG-Gd-9CH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4g6-E0-zcr">
+                                <rect key="frame" x="162" y="280" width="90" height="30"/>
+                                <state key="normal" title="Поиск групп"/>
+                                <connections>
+                                    <segue destination="tcf-fd-GOq" kind="show" id="Xyl-e9-R1l"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLt-EY-2Rg">
+                                <rect key="frame" x="181.5" y="318" width="51" height="30"/>
+                                <state key="normal" title="Друзья"/>
+                                <connections>
+                                    <segue destination="fvt-rX-fqV" kind="show" id="EqZ-4e-FoE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tof-yb-agw">
+                                <rect key="frame" x="188.5" y="356" width="37" height="30"/>
+                                <state key="normal" title="Фото"/>
+                                <connections>
+                                    <segue destination="UcO-SR-nh9" kind="show" id="FOB-pn-WWs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4g6-E0-zcr" firstAttribute="top" secondItem="OhV-pr-TZL" secondAttribute="bottom" constant="8" id="51H-Mh-ERJ"/>
+                            <constraint firstItem="Rgc-PG-n1S" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="KZu-EJ-iGm"/>
+                            <constraint firstItem="ZLt-EY-2Rg" firstAttribute="top" secondItem="4g6-E0-zcr" secondAttribute="bottom" constant="8" id="LJI-ze-IeK"/>
+                            <constraint firstItem="Rgc-PG-n1S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PiV-BP-Y1y"/>
+                            <constraint firstItem="Tof-yb-agw" firstAttribute="top" secondItem="ZLt-EY-2Rg" secondAttribute="bottom" constant="8" id="QU8-fR-ZgA"/>
+                            <constraint firstItem="Rgc-PG-n1S" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Qc8-9V-yUp"/>
+                            <constraint firstItem="ZLt-EY-2Rg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QmO-3z-Zyf"/>
+                            <constraint firstItem="Tof-yb-agw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Uta-0y-2OA"/>
+                            <constraint firstItem="4g6-E0-zcr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dO5-yj-8Lh"/>
+                            <constraint firstItem="Rgc-PG-n1S" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kuz-df-Cks"/>
+                            <constraint firstItem="OhV-pr-TZL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lGB-Gz-8Zq"/>
+                            <constraint firstItem="OhV-pr-TZL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="154" id="xyO-mY-4Mc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="a8c-vW-vwq"/>
                     <connections>
                         <outlet property="authorizationView" destination="Rgc-PG-n1S" id="3HX-oV-U5g"/>
                     </connections>
@@ -38,6 +96,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
+        </scene>
+        <!--Search Groups View Controller-->
+        <scene sceneID="yIL-BM-7U5">
+            <objects>
+                <viewController id="tcf-fd-GOq" customClass="SearchGroupsViewController" customModule="YY_Client_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Fm-Hl-R0V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bdp-fP-cBq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X3v-Ih-wjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="-242"/>
+        </scene>
+        <!--Friends View Controller-->
+        <scene sceneID="dsr-Zw-l0g">
+            <objects>
+                <viewController id="fvt-rX-fqV" customClass="FriendsViewController" customModule="YY_Client_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ziF-mm-1Me">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6fJ-tM-cwl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zeG-FU-wRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="461"/>
+        </scene>
+        <!--Photos View Controller-->
+        <scene sceneID="L95-em-93w">
+            <objects>
+                <viewController id="UcO-SR-nh9" customClass="PhotosViewController" customModule="YY_Client_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PNL-zd-AaI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="1IS-a1-lnx"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P8W-Pe-Upb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="1158"/>
+        </scene>
+        <!--Groups View Controller-->
+        <scene sceneID="sAl-Wh-1dz">
+            <objects>
+                <viewController id="Zud-mu-7dw" customClass="GroupsViewController" customModule="YY_Client_APP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wyl-Vu-JbS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="whE-bG-cs3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o6X-dh-gYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1542" y="-954"/>
         </scene>
     </scenes>
 </document>

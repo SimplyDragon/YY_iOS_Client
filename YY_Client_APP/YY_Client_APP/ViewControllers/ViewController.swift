@@ -66,15 +66,10 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let session = Session.instance
         session.token = token!
         
-        print(session.token)
-        
-        let vkService = VKService()
-        vkService.doNetworkRequest()
-        vkService.getFriends()
+        //print(session.token)
         
         decisionHandler(.cancel)
     }
-    
 
 }
 
