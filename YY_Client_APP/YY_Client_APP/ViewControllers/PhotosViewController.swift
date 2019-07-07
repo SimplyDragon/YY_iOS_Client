@@ -11,6 +11,8 @@ import Alamofire
 
 class PhotosViewController: UIViewController {
 
+    @IBOutlet weak var RawLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,9 +20,10 @@ class PhotosViewController: UIViewController {
         
         AF.request(vkService.getPhotos(id: "159295915")!).responseJSON { response in
             do {
-                let users = try JSONDecoder().decode(PhotosResponse.self, from: response.data!)
+                let photos = try JSONDecoder().decode(PhotosResponse.self, from: response.data!)
                 
-                print(users)
+                print(photos)
+                self.RawLabel.text = "\(photos)"
             } catch {
                 print(error) }
         }

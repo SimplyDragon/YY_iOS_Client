@@ -12,6 +12,8 @@ import Alamofire
 
 class GroupsViewController: UIViewController {
 
+    @IBOutlet weak var GroupsLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,9 +22,10 @@ class GroupsViewController: UIViewController {
         AF.request(vkService.getMyGroups()!).responseJSON { response in
             //            guard let data = response.value else { return }
             do {
-                let users = try JSONDecoder().decode(GroupsResponse.self, from: response.data!)
+                let groups = try JSONDecoder().decode(GroupsResponse.self, from: response.data!)
                 
-                print(users)
+                print(groups)
+                self.GroupsLabel.text = "\(groups)"
             } catch {
                 print(error) }
         }

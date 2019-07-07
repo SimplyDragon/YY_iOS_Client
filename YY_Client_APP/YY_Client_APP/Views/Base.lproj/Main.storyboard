@@ -104,13 +104,37 @@
                     <view key="view" contentMode="scaleToFill" id="9Fm-Hl-R0V">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные о поиске групп:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H0n-Mr-8nY">
+                                <rect key="frame" x="20" y="113" width="303" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQM-U4-4eV">
+                                <rect key="frame" x="20" y="142" width="374" height="720"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="H0n-Mr-8nY" firstAttribute="leading" secondItem="bdp-fP-cBq" secondAttribute="leading" constant="20" id="Bce-Wg-7UE"/>
+                            <constraint firstItem="rQM-U4-4eV" firstAttribute="leading" secondItem="bdp-fP-cBq" secondAttribute="leading" constant="20" id="C46-OF-h3O"/>
+                            <constraint firstItem="H0n-Mr-8nY" firstAttribute="top" secondItem="bdp-fP-cBq" secondAttribute="top" constant="25" id="Ca7-gt-4m0"/>
+                            <constraint firstItem="rQM-U4-4eV" firstAttribute="top" secondItem="H0n-Mr-8nY" secondAttribute="bottom" constant="8" id="vFZ-3F-DAK"/>
+                            <constraint firstItem="rQM-U4-4eV" firstAttribute="centerX" secondItem="9Fm-Hl-R0V" secondAttribute="centerX" id="z7A-xj-DQa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bdp-fP-cBq"/>
                     </view>
+                    <connections>
+                        <outlet property="RawLabel" destination="rQM-U4-4eV" id="eJW-1q-Mzy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X3v-Ih-wjT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="-242"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="-242.41071428571428"/>
         </scene>
         <!--Friends View Controller-->
         <scene sceneID="dsr-Zw-l0g">
@@ -119,13 +143,37 @@
                     <view key="view" contentMode="scaleToFill" id="ziF-mm-1Me">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные о друзьях" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMd-D0-EG9">
+                                <rect key="frame" x="20" y="113" width="228" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PG-2m-Bd3">
+                                <rect key="frame" x="20" y="157" width="374" height="706"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jMd-D0-EG9" firstAttribute="top" secondItem="6fJ-tM-cwl" secondAttribute="top" constant="25" id="1Mx-60-o77"/>
+                            <constraint firstItem="9PG-2m-Bd3" firstAttribute="top" secondItem="jMd-D0-EG9" secondAttribute="bottom" constant="10" id="5OM-cJ-ybm"/>
+                            <constraint firstItem="9PG-2m-Bd3" firstAttribute="leading" secondItem="6fJ-tM-cwl" secondAttribute="leading" constant="20" id="QaX-MP-lfh"/>
+                            <constraint firstItem="9PG-2m-Bd3" firstAttribute="centerX" secondItem="ziF-mm-1Me" secondAttribute="centerX" id="sk1-PR-Kku"/>
+                            <constraint firstItem="jMd-D0-EG9" firstAttribute="leading" secondItem="6fJ-tM-cwl" secondAttribute="leading" constant="20" id="xpc-UW-Sq5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6fJ-tM-cwl"/>
                     </view>
+                    <connections>
+                        <outlet property="RawLabel" destination="9PG-2m-Bd3" id="lpN-we-E2c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zeG-FU-wRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="461"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="460.71428571428567"/>
         </scene>
         <!--Photos View Controller-->
         <scene sceneID="L95-em-93w">
@@ -134,13 +182,37 @@
                     <view key="view" contentMode="scaleToFill" id="PNL-zd-AaI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные о фото:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kaj-Cf-naG">
+                                <rect key="frame" x="20" y="113" width="197" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1IT-4Q-U5Y">
+                                <rect key="frame" x="20" y="157" width="374" height="706"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kaj-Cf-naG" firstAttribute="top" secondItem="1IS-a1-lnx" secondAttribute="top" constant="25" id="NJy-ay-9X9"/>
+                            <constraint firstItem="1IT-4Q-U5Y" firstAttribute="leading" secondItem="1IS-a1-lnx" secondAttribute="leading" constant="20" id="OdR-Vi-LUa"/>
+                            <constraint firstItem="1IT-4Q-U5Y" firstAttribute="centerX" secondItem="PNL-zd-AaI" secondAttribute="centerX" id="lmc-gP-IGq"/>
+                            <constraint firstItem="kaj-Cf-naG" firstAttribute="leading" secondItem="1IS-a1-lnx" secondAttribute="leading" constant="20" id="sgo-zz-i8S"/>
+                            <constraint firstItem="1IT-4Q-U5Y" firstAttribute="top" secondItem="kaj-Cf-naG" secondAttribute="bottom" constant="10" id="xTL-Cr-spR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="1IS-a1-lnx"/>
                     </view>
+                    <connections>
+                        <outlet property="RawLabel" destination="1IT-4Q-U5Y" id="v3G-rB-VYl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8W-Pe-Upb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="1158"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="1157.8125"/>
         </scene>
         <!--Groups View Controller-->
         <scene sceneID="sAl-Wh-1dz">
@@ -149,13 +221,40 @@
                     <view key="view" contentMode="scaleToFill" id="Wyl-Vu-JbS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Данные о группах:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d45-gZ-eCU">
+                                <rect key="frame" x="20" y="113" width="220" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ss2-ON-GYC">
+                                <rect key="frame" x="20" y="153" width="374" height="709"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="709" id="zYW-ev-rcB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="d45-gZ-eCU" firstAttribute="leading" secondItem="whE-bG-cs3" secondAttribute="leading" constant="20" id="FX3-dT-zAC"/>
+                            <constraint firstItem="Ss2-ON-GYC" firstAttribute="top" secondItem="d45-gZ-eCU" secondAttribute="bottom" constant="8" symbolic="YES" id="GCW-eQ-lmQ"/>
+                            <constraint firstItem="d45-gZ-eCU" firstAttribute="top" secondItem="whE-bG-cs3" secondAttribute="top" constant="25" id="WtS-J1-f3s"/>
+                            <constraint firstItem="Ss2-ON-GYC" firstAttribute="centerX" secondItem="Wyl-Vu-JbS" secondAttribute="centerX" id="cZg-2e-spT"/>
+                            <constraint firstItem="Ss2-ON-GYC" firstAttribute="leading" secondItem="d45-gZ-eCU" secondAttribute="leading" id="zTu-LV-TLQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="whE-bG-cs3"/>
                     </view>
+                    <connections>
+                        <outlet property="GroupsLabel" destination="Ss2-ON-GYC" id="Fza-GC-W5w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o6X-dh-gYJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1542" y="-954"/>
+            <point key="canvasLocation" x="1540.5797101449277" y="-954.24107142857133"/>
         </scene>
     </scenes>
 </document>

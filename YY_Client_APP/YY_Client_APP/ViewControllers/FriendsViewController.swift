@@ -11,6 +11,7 @@ import Alamofire
 
 class FriendsViewController: UIViewController {
 
+    @IBOutlet weak var RawLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -21,6 +22,7 @@ class FriendsViewController: UIViewController {
                 let users = try JSONDecoder().decode(FriendsResponse.self, from: response.data!)
                 
                 print(users)
+                self.RawLabel.text = "\(users)"
             } catch {
                 print(error) }
         }

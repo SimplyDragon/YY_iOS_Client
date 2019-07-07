@@ -11,6 +11,7 @@ import Alamofire
 
 class SearchGroupsViewController: UIViewController {
 
+    @IBOutlet weak var RawLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,9 +20,10 @@ class SearchGroupsViewController: UIViewController {
         AF.request(vkService.searchGroups(searchQuery: "Лепра")!).responseJSON { response in
             //            guard let data = response.value else { return }
             do {
-                let users = try JSONDecoder().decode(GroupsResponse.self, from: response.data!)
+                let groups = try JSONDecoder().decode(GroupsResponse.self, from: response.data!)
                 
-                print(users)
+                print(groups)
+                self.RawLabel.text = "\(groups)"
             } catch {
                 print(error) }
         }
