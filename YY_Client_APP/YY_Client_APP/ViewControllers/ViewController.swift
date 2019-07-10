@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import Alamofire
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController, WKNavigationDelegate {
     
@@ -64,7 +65,11 @@ class ViewController: UIViewController, WKNavigationDelegate {
         let token = params["access_token"]
         
         let session = Session.instance
-        session.token = token!
+        //session.token = token!
+        
+        //Сохранение токена в KeyChain и чтение из него
+        KeychainWrapper.standard.set(token!, forKey: "tokenKC")
+        session.token = KeychainWrapper.standard.string(forKey: "tokenKC") ?? "none"
         
         //print(session.token)
         

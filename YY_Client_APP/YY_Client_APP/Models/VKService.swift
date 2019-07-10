@@ -20,6 +20,24 @@ class VKService {
     }
     
     // Формировние запросов к VK API
+    func getProfile() -> URLConvertible? {
+        let session = Session.instance
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "api.vk.com"
+        urlComponents.path = "/method/account.getProfileInfo"
+        urlComponents.queryItems = [
+            URLQueryItem(name: "access_token", value: session.token),
+            URLQueryItem(name: "v", value: "5.80")
+        ]
+        if let url = urlComponents.url {
+            return url
+        }
+        
+        return nil
+    }
+    
     func getFriends() -> URLConvertible? {
         let session = Session.instance
         
