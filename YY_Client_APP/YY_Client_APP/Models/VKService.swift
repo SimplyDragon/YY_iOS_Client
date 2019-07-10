@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class VKService {
     
@@ -19,10 +20,8 @@ class VKService {
     }
     
     // Формировние запросов к VK API
-    // to-do Перенести в отдельный класс
-    func getFriends() -> Any? {
+    func getFriends() -> URLConvertible? {
         let session = Session.instance
-        let request = Alamofire.Session.default
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -35,21 +34,14 @@ class VKService {
             URLQueryItem(name: "v", value: "5.80")
         ]
         if let url = urlComponents.url {
-            request.request(URLRequest(url: url)).responseJSON { response in
-                if let json = response.value {
-                    print("FRIENDS JSON: \(json)")
-                }
-            }
-            
             return url
         }
         
         return nil
     }
     
-    func getPhotos(id ID: String) -> Any? {
+    func getPhotos(id ID: String) -> URLConvertible? {
         let session = Session.instance
-        let request = Alamofire.Session.default
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -63,20 +55,14 @@ class VKService {
             URLQueryItem(name: "v", value: "5.80")
         ]
         if let url = urlComponents.url {
-            request.request(URLRequest(url: url)).responseJSON { response in
-                if let json = response.value {
-                    print("PHOTOS JSON: \(json)")
-                }
-            }
             return url
         }
         
         return nil
     }
     
-    func getMyGroups() -> Any? {
+    func getMyGroups() -> URLConvertible? {
         let session = Session.instance
-        let request = Alamofire.Session.default
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -89,21 +75,14 @@ class VKService {
             URLQueryItem(name: "v", value: "5.80")
         ]
         if let url = urlComponents.url {
-            request.request(URLRequest(url: url)).responseJSON { response in
-                if let json = response.value {
-                    print("GROUPS JSON: \(json)")
-                }
-            }
-            
             return url
         }
         
         return nil
     }
     
-    func searchGroups(searchQuery query: String) -> Any? {
+    func searchGroups(searchQuery query: String) -> URLConvertible? {
         let session = Session.instance
-        let request = Alamofire.Session.default
         
         var urlComponents = URLComponents()
         urlComponents.scheme = "https"
@@ -116,36 +95,10 @@ class VKService {
             URLQueryItem(name: "access_token", value: session.token),
             URLQueryItem(name: "v", value: "5.80")
         ]
-        if let url = urlComponents.url {
-            request.request(URLRequest(url: url)).responseJSON { response in
-                if let json = response.value {
-                    print("SEARCH JSON: \(json)")
-                }
-            }
-            
+        if let url = urlComponents.url {            
             return url
         }
         
         return nil
-    }
-    
-    
-    // Сервисная функция, чтобы проверить, что все запросы уходят
-    // Получение данных по группам, друзьям и фото
-    func doNetworkRequest() {
-        
-        let request = Alamofire.Session.default
-        
-        // Получаем список друзей
-        getFriends()
-        
-        // Получаем список фотографий пользователя
-        getPhotos(id: "159295915")
-
-        // Получаем список групп пользователя
-        getMyGroups()
-//
-//        // Получаем список групп по запросу
-        searchGroups(searchQuery: "Лепра")
     }
 }
