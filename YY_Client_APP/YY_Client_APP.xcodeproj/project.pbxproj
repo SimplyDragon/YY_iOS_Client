@@ -22,6 +22,8 @@
 		C474B38522D2B12F004BB312 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B38422D2B12F004BB312 /* PhotosViewController.swift */; };
 		C474B38722D2B3FE004BB312 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B38622D2B3FE004BB312 /* FriendsViewController.swift */; };
 		C474B38922D2B46F004BB312 /* SearchGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B38822D2B46F004BB312 /* SearchGroupsViewController.swift */; };
+		C474B38B22D68373004BB312 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B38A22D68373004BB312 /* ProfileViewController.swift */; };
+		C474B38D22D686D5004BB312 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C474B38C22D686D5004BB312 /* Profile.swift */; };
 		D15D361CA6515F85860C1CEB /* Pods_YY_Client_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3437B2D01B9EBE0ADAA5B2F6 /* Pods_YY_Client_APP.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,8 @@
 		C474B38422D2B12F004BB312 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		C474B38622D2B3FE004BB312 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		C474B38822D2B46F004BB312 /* SearchGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupsViewController.swift; sourceTree = "<group>"; };
+		C474B38A22D68373004BB312 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C474B38C22D686D5004BB312 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		D8C6A281CC11ACA6106FF550 /* Pods-YY_Client_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YY_Client_APP.debug.xcconfig"; path = "Target Support Files/Pods-YY_Client_APP/Pods-YY_Client_APP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +122,7 @@
 				C474B37A22D29917004BB312 /* Friends.swift */,
 				C474B37C22D29E2B004BB312 /* Photos.swift */,
 				C474B37E22D29E4B004BB312 /* Groups.swift */,
+				C474B38C22D686D5004BB312 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 				C474B38422D2B12F004BB312 /* PhotosViewController.swift */,
 				C474B38622D2B3FE004BB312 /* FriendsViewController.swift */,
 				C474B38822D2B46F004BB312 /* SearchGroupsViewController.swift */,
+				C474B38A22D68373004BB312 /* ProfileViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -261,9 +267,11 @@
 				C474B38522D2B12F004BB312 /* PhotosViewController.swift in Sources */,
 				C474B37D22D29E2B004BB312 /* Photos.swift in Sources */,
 				C474B37922D28C87004BB312 /* VKService.swift in Sources */,
+				C474B38D22D686D5004BB312 /* Profile.swift in Sources */,
 				C474B36222C95791004BB312 /* ViewController.swift in Sources */,
 				C474B38922D2B46F004BB312 /* SearchGroupsViewController.swift in Sources */,
 				C474B36022C95791004BB312 /* AppDelegate.swift in Sources */,
+				C474B38B22D68373004BB312 /* ProfileViewController.swift in Sources */,
 				C474B38322D2AE37004BB312 /* GroupsViewController.swift in Sources */,
 				C474B38722D2B3FE004BB312 /* FriendsViewController.swift in Sources */,
 				C474B37B22D29917004BB312 /* Friends.swift in Sources */,

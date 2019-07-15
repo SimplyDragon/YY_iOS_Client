@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftKeychainWrapper
 
 class Session {
     
@@ -15,4 +16,5 @@ class Session {
     
     var token: String = ""
     var userID: Int = 0
+    
 }
