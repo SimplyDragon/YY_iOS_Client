@@ -10,5 +10,6 @@ target 'YY_Client_APP' do
   pod 'Alamofire', '~> 5.0.0-beta.5'
   pod 'SwiftyJSON', '~> 4.0'
   pod 'SwiftKeychainWrapper', '~>  3.4'
+  pod 'RealmSwift'
 
 end
